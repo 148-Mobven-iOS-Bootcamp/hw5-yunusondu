@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dLW-i8-o6M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dLW-i8-o6M">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -328,39 +328,85 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gwP-Ey-78A">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <connections>
                                     <outlet property="delegate" destination="m2C-yw-bgz" id="rBe-2a-h6x"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffX-8M-m1I">
-                                <rect key="frame" x="16" y="819" width="45" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="location" catalog="system"/>
-                                <connections>
-                                    <action selector="showCurrentLocationTapped:" destination="m2C-yw-bgz" eventType="touchUpInside" id="Hq1-LS-Qtn"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usr-1g-YKp">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" id="ydg-X6-HPS">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ffX-8M-m1I">
+                                            <rect key="frame" x="20" y="10" width="48.5" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="location" catalog="system"/>
+                                            <connections>
+                                                <action selector="showCurrentLocationTapped:" destination="m2C-yw-bgz" eventType="touchUpInside" id="Hq1-LS-Qtn"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="avg-0Z-yfk"/>
+                                    <barButtonItem style="plain" id="DYx-rI-YTK">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="fSY-Dz-KYb">
+                                            <rect key="frame" x="99.5" y="10" width="101" height="34.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward" catalog="system"/>
+                                            <connections>
+                                                <action selector="navButtonsTapped:" destination="m2C-yw-bgz" eventType="touchUpInside" id="gli-0W-xln"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="NEa-l1-B0n">
+                                        <button key="customView" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ulF-ej-kEk">
+                                            <rect key="frame" x="200.5" y="10" width="101" height="34.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.forward" catalog="system"/>
+                                            <connections>
+                                                <action selector="navButtonsTapped:" destination="m2C-yw-bgz" eventType="touchUpInside" id="q2P-3G-hMo"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="vpO-WZ-ekl"/>
+                                    <barButtonItem style="plain" id="oah-QH-Fuc">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Rj7-N3-dJi">
+                                            <rect key="frame" x="301.5" y="10" width="112.5" height="34.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Draw Route"/>
+                                            <connections>
+                                                <action selector="drawRouteButtonTapped:" destination="m2C-yw-bgz" eventType="touchUpInside" id="fp5-5d-IK4"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cKL-Sn-6Te"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Usr-1g-YKp" secondAttribute="trailing" id="7PM-zf-Aht"/>
+                            <constraint firstItem="cKL-Sn-6Te" firstAttribute="bottom" secondItem="Usr-1g-YKp" secondAttribute="bottom" id="Aei-9X-35J"/>
                             <constraint firstItem="gwP-Ey-78A" firstAttribute="top" secondItem="cKL-Sn-6Te" secondAttribute="top" id="S1H-HN-TNN"/>
-                            <constraint firstItem="cKL-Sn-6Te" firstAttribute="bottom" secondItem="gwP-Ey-78A" secondAttribute="bottom" id="X4e-wV-bea"/>
                             <constraint firstItem="cKL-Sn-6Te" firstAttribute="trailing" secondItem="gwP-Ey-78A" secondAttribute="trailing" id="dOP-hM-XIz"/>
+                            <constraint firstItem="Usr-1g-YKp" firstAttribute="leading" secondItem="cKL-Sn-6Te" secondAttribute="leading" id="g1I-uv-u95"/>
+                            <constraint firstItem="Usr-1g-YKp" firstAttribute="top" secondItem="gwP-Ey-78A" secondAttribute="bottom" id="n7f-HW-Ehx"/>
                             <constraint firstItem="gwP-Ey-78A" firstAttribute="leading" secondItem="cKL-Sn-6Te" secondAttribute="leading" id="nta-0z-NAT"/>
-                            <constraint firstItem="ffX-8M-m1I" firstAttribute="leading" secondItem="cKL-Sn-6Te" secondAttribute="leading" constant="16" id="y8J-QK-62p"/>
-                            <constraint firstItem="cKL-Sn-6Te" firstAttribute="bottom" secondItem="ffX-8M-m1I" secondAttribute="bottom" constant="12" id="zVa-0s-bRv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AAX-mw-rl1"/>
                     <connections>
                         <outlet property="mapView" destination="gwP-Ey-78A" id="UAs-b5-265"/>
+                        <outletCollection property="navButtons" destination="ulF-ej-kEk" collectionClass="NSMutableArray" id="gzV-Gc-U4h"/>
+                        <outletCollection property="navButtons" destination="fSY-Dz-KYb" collectionClass="NSMutableArray" id="lS5-Kd-uLt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGL-gP-UiA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="900"/>
+            <point key="canvasLocation" x="334.78260869565219" y="900"/>
         </scene>
         <!--Tabb Bar View Controller-->
         <scene sceneID="NeK-yN-FQh">
@@ -463,11 +509,11 @@
                                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qtK-F7-FH4" id="qmu-G0-CQS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G8R-7A-SDZ">
-                                                            <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
+                                                            <rect key="frame" x="20" y="0.0" width="356.5" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                             <nil key="textColor"/>
@@ -805,6 +851,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
         <image name="bgImage" width="640" height="360"/>
         <image name="location" catalog="system" width="128" height="118"/>
         <systemColor name="labelColor">
