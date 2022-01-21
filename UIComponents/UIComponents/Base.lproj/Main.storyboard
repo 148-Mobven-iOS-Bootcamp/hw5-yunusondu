@@ -423,6 +423,22 @@
             </objects>
             <point key="canvasLocation" x="1196" y="915"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ZOJ-L2-VhY">
+            <objects>
+                <viewController id="964-5e-QXq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cf7-xq-LEd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iOo-Ka-029"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fzl-K3-cbP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5Z-s3-FQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="1588"/>
+        </scene>
         <!--Dynamic Collection View Controller-->
         <scene sceneID="KAr-ZD-e4Z">
             <objects>
@@ -760,6 +776,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="m2C-yw-bgz" kind="show" id="yD3-pN-Xxh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="4ho-h7-UJh" style="IBUITableViewCellStyleDefault" id="OcW-cp-CCk">
+                                        <rect key="frame" x="0.0" y="349" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OcW-cp-CCk" id="y9w-e1-X15">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="BannerSlider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4ho-h7-UJh">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="964-5e-QXq" kind="show" id="dQp-la-IdH"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

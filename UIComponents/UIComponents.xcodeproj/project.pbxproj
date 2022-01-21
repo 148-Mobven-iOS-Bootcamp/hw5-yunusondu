@@ -28,6 +28,7 @@
 		2391F724277732FC00269D7F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2391F723277732FC00269D7F /* SecondViewController.swift */; };
 		2391F74C27788A4500269D7F /* DynamicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2391F74B27788A4400269D7F /* DynamicTableViewController.swift */; };
 		2391F75127788C8300269D7F /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2391F75027788C8300269D7F /* UIColorExtensions.swift */; };
+		D0688EC1279B77EE004E54C1 /* BannerSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0688EC0279B77EE004E54C1 /* BannerSliderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		2391F723277732FC00269D7F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2391F74B27788A4400269D7F /* DynamicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableViewController.swift; sourceTree = "<group>"; };
 		2391F75027788C8300269D7F /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		D0688EC0279B77EE004E54C1 /* BannerSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSliderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				238A332C278AD40D0070B74E /* TabbBarViewController.swift */,
 				238A332E278AE3100070B74E /* WebViewContainerViewController.swift */,
 				238A3330278AF6A80070B74E /* MapViewController.swift */,
+				D0688EC0279B77EE004E54C1 /* BannerSliderViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				238A331C278979550070B74E /* Constant.swift in Sources */,
 				23097ECB276F330D00AC8761 /* ViewController.swift in Sources */,
 				23097EC7276F330D00AC8761 /* AppDelegate.swift in Sources */,
+				D0688EC1279B77EE004E54C1 /* BannerSliderViewController.swift in Sources */,
 				238A332D278AD40D0070B74E /* TabbBarViewController.swift in Sources */,
 				2391F75127788C8300269D7F /* UIColorExtensions.swift in Sources */,
 				238A332B278AC2F60070B74E /* CompostitionalCollectionViewController.swift in Sources */,
