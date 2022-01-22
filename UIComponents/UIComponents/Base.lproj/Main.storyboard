@@ -423,21 +423,84 @@
             </objects>
             <point key="canvasLocation" x="1196" y="915"/>
         </scene>
-        <!--View Controller-->
+        <!--Banner Slider View Controller-->
         <scene sceneID="ZOJ-L2-VhY">
             <objects>
-                <viewController id="964-5e-QXq" sceneMemberID="viewController">
+                <viewController id="964-5e-QXq" customClass="BannerSliderViewController" customModule="UIComponents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cf7-xq-LEd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-fE-aj4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JSQ-X0-AJs">
+                                        <rect key="frame" x="0.0" y="8" width="414" height="2000"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hak-H2-jlN">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="zt0-3g-G0c"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZu-uv-Jjy">
+                                                <rect key="frame" x="0.0" y="400" width="414" height="400"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="vCO-XE-CzH"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rqr-ze-0hb">
+                                                <rect key="frame" x="0.0" y="800" width="414" height="400"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="86M-2Z-5RO"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjQ-Xw-grl">
+                                                <rect key="frame" x="0.0" y="1200" width="414" height="400"/>
+                                                <color key="backgroundColor" systemColor="tintColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="RVY-5Z-0N0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gX-Qy-lP3">
+                                                <rect key="frame" x="0.0" y="1600" width="414" height="400"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="KkC-Xk-hj2"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="60u-kK-1tt"/>
+                                            <constraint firstAttribute="height" constant="2000" id="Ke3-YS-iZB"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JSQ-X0-AJs" firstAttribute="leading" secondItem="XWz-fE-aj4" secondAttribute="leading" id="9OB-av-6Yt"/>
+                                    <constraint firstAttribute="bottom" secondItem="JSQ-X0-AJs" secondAttribute="bottom" id="LTh-WL-5JW"/>
+                                    <constraint firstAttribute="trailing" secondItem="JSQ-X0-AJs" secondAttribute="trailing" id="j1h-sq-s6q"/>
+                                    <constraint firstItem="JSQ-X0-AJs" firstAttribute="top" secondItem="XWz-fE-aj4" secondAttribute="top" constant="8" id="mZr-kG-W7O"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iOo-Ka-029"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XWz-fE-aj4" firstAttribute="trailing" secondItem="iOo-Ka-029" secondAttribute="trailing" id="Gcb-rq-3Kc"/>
+                            <constraint firstItem="XWz-fE-aj4" firstAttribute="top" secondItem="iOo-Ka-029" secondAttribute="top" id="I14-ba-Uqu"/>
+                            <constraint firstAttribute="bottom" secondItem="XWz-fE-aj4" secondAttribute="bottom" id="a62-HK-qY3"/>
+                            <constraint firstItem="XWz-fE-aj4" firstAttribute="leading" secondItem="iOo-Ka-029" secondAttribute="leading" id="h0H-cc-RbM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fzl-K3-cbP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5Z-s3-FQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="1588"/>
+            <point key="canvasLocation" x="950.72463768115949" y="1587.7232142857142"/>
         </scene>
         <!--Dynamic Collection View Controller-->
         <scene sceneID="KAr-ZD-e4Z">
@@ -897,6 +960,9 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -911,6 +977,9 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
